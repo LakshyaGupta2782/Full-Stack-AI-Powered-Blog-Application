@@ -10,7 +10,7 @@ const Footer = () => {
             <div>
                 <img src={assets.logo} alt="logo" className='w-32 sm:w-44'/>
                 <p className='max-w-[410px] mt-6'>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum unde quaerat eveniet cumque accusamus atque qui error quo enim fugiat?
+                    Welcome to the Blog App, a platform where you can create, share, and explore blogs on various topics while connecting with other readers and writers.
                 </p>
             </div>
 

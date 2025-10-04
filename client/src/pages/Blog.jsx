@@ -103,6 +103,7 @@ const Blog = () => {
           </div>
 
           {/* Share Buttons */}
+          
           <div className='my-24 max-w-3xl mx-auto'>
             <p className='font-semibold my-4'>Share this article on social media</p>
             <div className='flex'>
