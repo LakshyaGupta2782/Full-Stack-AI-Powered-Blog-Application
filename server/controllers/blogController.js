@@ -3,7 +3,6 @@ import imagekit from '../configs/imageKit.js';
 import Blog from '../models/blog.js';
 import Comment from '../models/comments.js';
 
-
 export const addBlog = async (req, res) => {
     try {
         const { title, subTitle, description, category, isPublished } = JSON.parse(req.body.blog);
@@ -20,7 +19,7 @@ export const addBlog = async (req, res) => {
         const response = await imagekit.upload({
             file: fileBuffer,
             fileName: imageFile.originalname,
-            folder: "/blogs"
+            folder: "/blogs"    // this is optional 
         });
 
         // optimization through imagekit URL transformation
