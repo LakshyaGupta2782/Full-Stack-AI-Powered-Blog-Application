@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import BlogTableItem from './BlogTableItem'
 import { useState } from 'react'
 import { blog_data } from '../../assets/assets' 
-import {useAppContext} from '../../context/appContext'
+import {useAppContext} from '../../context/AppContext'
 
 const ListBlog = () => {
 
