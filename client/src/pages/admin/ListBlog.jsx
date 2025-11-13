@@ -2,12 +2,25 @@ import React, { useEffect } from 'react'
 import BlogTableItem from './BlogTableItem'
 import { useState } from 'react'
 import { blog_data } from '../../assets/assets' 
+import {useAppContext} from '../../context/appContext'
+
 const ListBlog = () => {
 
   const [blogs,setBlogs]=useState([])
+  const {axios} = useAppContext(); 
 
   const fetchBlogs = async () => {
-    setBlogs(blog_data)
+    // setBlogs(blog_data)
+    try{
+      const {data} = await axios.get('/api/admin/blogs')
+      if(data.success){
+        setBlogs(data.blogs)
+      }else{
+        toast.error(data.message)
+      }
+    } catch(error){
+      toast.error(error.message)
+    }
   }
 
   useEffect(() => {
@@ -17,7 +30,7 @@ const ListBlog = () => {
 
   return (
     <div className=' flex-1 pt-5 px-5 sm:pt-12 bg-blue-50/50'>
-      <h1>ALl blogs</h1>
+      <h1>ALL blogs</h1>
       
       <div className='relative h-4/5 mt-4 max-w-4xl overflow-x-auto shadow rounded-lg scrollbar-hide bg-white'>
         <table className='w-full text-sm text-gray-500'>

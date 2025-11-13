@@ -45,9 +45,7 @@ const Header = () => {
           Search
         </button>
       </form>
-    </div>
-
-    
+    </div> 
 
     <div className='text-center'>
       {

@@ -17,7 +17,7 @@ export const adminLogin = async (req, res) => {
   }
 }
 
-export const getAllBlogsAdmin = async (req, res) => {
+export const getAllBlogsAdmin = async (req, res) =>{
     try {
         const blogs = await Blog.find({}).sort({ createdAt: -1 });
         res.json({ success: true, blogs });
@@ -27,7 +27,7 @@ export const getAllBlogsAdmin = async (req, res) => {
 }
 
 export const getAllComments = async (req, res) => {
-    try {
+    try{
         const comments = await Comment.find({}).populate("blog").sort({ createdAt: -1 });
         res.json({ success: true, comments });
     } catch (error) {
@@ -48,8 +48,8 @@ export const getDashboard = async (req, res) => {
             drafts,
             recentBlogs
         };
-
         res.json({ success: true, dashboardData });
+
     } catch (error) {
         res.json({ success: false, message: error.message });
     }

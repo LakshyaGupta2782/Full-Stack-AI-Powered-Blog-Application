@@ -22,7 +22,7 @@ export const AppProvider = ({children})=>{
         }
     }
 
-    useEffect(()=>{
+    useEffect(()=> {
         fetchBlogs();
         const token = localStorage.getItem('token');
         if(token)
