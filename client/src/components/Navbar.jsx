@@ -16,6 +16,6 @@ const Navbar = () =>
         </button> 
     </div>
     )
-    }
+}
 
 export default Navbar
